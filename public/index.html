@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyAQLHnMnLqp4tAVZywwweEH66x6AJeyQwA",
+  authDomain: "markdown-previewer-aa245.firebaseapp.com",
+  projectId: "markdown-previewer-aa245",
+  storageBucket: "markdown-previewer-aa245.appspot.com",
+  messagingSenderId: "382669830819",
+  appId: "1:382669830819:web:f367a2f1bf5d66e53fdd16",
+  measurementId: "G-D19W5XY484"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+    </script>
+</head>
+<body>
+    <div id="root"></div>
+    <script src="main.js"></script>
+</body>
+</html>
