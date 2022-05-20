@@ -1,0 +1,59 @@
+@use "Mixins" as *;
+@use "Variables" as v;
+
+html {
+    font-size: calc(16px - (2000px - 100vw)/400);
+}
+body {
+    background-color: v.$primary-color;
+    @include flex(column, center, center);
+}
+
+.title {
+    text-align: center;
+    text-shadow: .2rem .2rem .2rem rgba($color: #000000, $alpha: 0.4);
+}
+
+.app-container {
+    @include flex(column, center, center);
+    background-color: v.$secondary-color;
+    width: 70vw;
+    border-radius: .5rem;
+    border: .3rem solid black;
+    @include text-styles(2rem, 100);
+    box-shadow: .5rem .5rem .5rem rgba($color: #000000, $alpha: .4);
+}
+
+.input {
+    height: 11rem;
+    width: 45vw;
+    @include text-styles(1rem, 100);
+    border-radius: .5rem;
+    border: .3rem solid black;
+    box-shadow: .5rem .5rem .5rem rgba($color: #000000, $alpha: .4);
+}
+
+.copy-button {
+    background-color: v.$primary-color;
+    color: white;
+    height: 3rem;
+    width: 7rem;
+    margin-top: 2rem;
+    border-radius: .5rem;
+    border: .3rem solid black;
+    box-shadow: .5rem .5rem .5rem rgba($color: #000000, $alpha: .4);
+    transition: all 200ms ease;
+    &:hover {
+        cursor: pointer;
+        transform: translateY(-.2rem);
+        background-color: v.$hover-color;
+    }
+    &:active {
+        transform: translateY(.2rem);
+        background-color: v.$secondary-color;
+    }
+}
+
+.output {
+    margin: 0 4rem 2rem 4rem;
+}
